@@ -8,29 +8,22 @@
 </head>
 <body>
     
-  <h1>Attributes</h1>
+  <h1>Properties</h1>
   
-  <label for="input">Password</label>
-  <input 
-    type="password" 
-    id="input"
-    name="password" 
-    value="12345"
-    style="display: inline-block"
-  >
-  
-  <script>
-    var input = document.getElementById('input');
-  
-    // access attributes
-    console.log("type:", input.type)
-    console.log("id:", input.id)
-    console.log("name:", input.name)
-    console.log("value:", input.value)
-    console.log("style outline:", input.style.display);
+  <p id="greeting" class="class1 class2">
+    hello DOM!
+  </p>
 
-    // update attributes
-    input.type = "text"
+  <script>
+    var greeting = document.getElementById("greeting");
+
+    // id
+    console.log(greeting.id);
+    // text contents
+    console.log(greeting.textContent);
+    // DOMTokenList
+    console.log(greeting.classList);
+
   </script>
 
 </body>

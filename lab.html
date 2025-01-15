@@ -7,12 +7,18 @@
 </head>
 <body>
 
-  <h1>writing and debugging script</h1>
+  <h1>JS Event</h1>
 
-  <!-- script tag -->
+  <button id="btn">click me</button>
+
   <script>
-    console.log("hello script!");
+    var btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function () {
+      alert("hello world!");      
+    })
   </script>
+
   
 </body>
 </html>
