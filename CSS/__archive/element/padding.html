@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>padding</h1>
+  <pre>
+    It creates additional space inside element.
+    It normally increases size of an element.
+  </pre>
+
+  <style>
+    .item {
+      background-color: #ddd;
+      display: inline-block;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+  
+    .pt-4 {
+      padding-top: 1rem;
+    }
+
+    .pb-4 {
+      padding-bottom: 1rem;
+    }
+  
+    .pl-4 {
+      padding-left: 1rem;
+    }
+    
+    .pr-4 {
+      padding-right: 1rem;
+    }
+  </style>
+  
+  <h3>없음</h3>
+  <div class="item">item</div>
+
+  <h3>전체</h3>
+  <div class="item p-4">item</div>
+
+  <h3>top</h3>
+  <div class="item pt-4">item</div>
+  
+  <h3>bottom</h3>
+  <div class="item pb-4">item</div>
+
+  <h3>left</h3>
+  <div class="item pl-4">item</div>
+
+  <h3>right</h3>
+  <div class="item pr-4">item</div>
+  
+  <h3>x축</h3>
+  <div class="item pl-4 pr-4">item</div>
+
+  <h3>y축</h3>
+  <div class="item pt-4 pb-4">item</div>
+
+  <h3>top 제외</h3>
+  <div class="item pr-4 pb-4 pl-4">item</div>
+  
+</body>
+</html>

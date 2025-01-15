@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>class selector</h1>
+  <p>select elements by class</p>
+
+  <ul>
+    <li class="item">foo</li>
+    <li class="item">bar</li>
+    <li class="item">baz</li>
+  </ul>
+
+  <script>
+    // document.getElementsByClassName(class)
+    var items = document.getElementsByClassName("item");
+
+    // HTMLCollections (type)
+    console.log(items) 
+
+    // access each element
+    console.log(items[0]) 
+    console.log(items[1]) 
+    console.log(items[2]) 
+    
+    // foo
+    // bar
+    // baz
+  
+    // get count of elements
+    console.log(items.length); 
+    // 3
+  </script>
+  
+</body>
+</html>

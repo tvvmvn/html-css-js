@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  
+  <style>
+    #input {
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      font-size: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      padding: 0.5rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <h1>Live Search</h1>
+
+  <input type="search" name="" id="input" placeholder="Search">
+  
+  <ul>
+    <li class="item">guinness</li>
+    <li class="item">heineken</li>
+    <li class="item">budwiser</li>
+    <li class="item">kloud</li>
+    <li class="item">asahi</li>
+  </ul>
+
+
+  <script>
+    var input = document.getElementById("input");
+    var items = document.getElementsByClassName("item");
+
+    input.addEventListener("keyup", handleKeyup);
+
+    function handleKeyup() {
+      var q = this.value.toLowerCase();
+
+      console.log("q:", q);
+
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+
+        if (item.textContent.indexOf(q) > -1) { // includes q
+          item.classList.remove("hidden");
+        } else {
+          item.classList.add("hidden");
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

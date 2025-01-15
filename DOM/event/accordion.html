@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" item="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item {
+      margin-bottom: 0.25rem;
+    }
+
+    .btn {
+      /* layout */
+      display: flex;
+      justify-content: space-between;
+      /* size */
+      width: 100%;
+      /* design */
+      padding: 0.5rem;
+      background-color: #eee;
+      border: none;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .btn::after {
+      content: "+";
+    }
+
+    .active .btn::after {
+      content: "-";
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s;
+    }
+
+    .active .content {
+      max-height: 200px;
+    }
+  </style>
+  
+
+  <h1>Accordion</h1>
+
+  <ul>
+    <li class="item">
+      <button class="btn" onclick="openContent(0)">Guinness</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Recusandae, libero temporibus eius saepe ullam voluptatibus 
+          in consequatur cum maiores tempore dolore iste atque qui 
+          officiis velit labore doloribus sint. Dolor.
+        </p>
+      </div>
+    </li>
+    <li class="item">
+      <button class="btn" onclick="openContent(1)">Heineken</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+          Recusandae, libero temporibus eius saepe ullam voluptatibus 
+          in consequatur cum maiores tempore dolore iste atque qui 
+          officiis velit labore doloribus sint. 
+        </p>
+      </div>
+    </li>
+    <li class="item">
+      <button class="btn" onclick="openContent(2)">Budwiser</button>
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <script>
+    var items = document.getElementsByClassName("item");
+
+    function openContent(index) {
+      items[index].classList.toggle("active");
+    }
+  </script>
+  
+</body>
+</html>

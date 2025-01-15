@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Block promotion</h1>
+
+  <style>
+    .text {
+      color: #ddd;
+    }
+
+    #block-btn, #close-btn {
+      padding: 0.5rem 0.75rem;
+      background-color: #000;
+      color: #fff;
+      border: none;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <div id="promotion">
+    <h1 class="text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Eos eveniet maxime iste vitae odit iure totam quaerat, amet, 
+      minus voluptatum quasi non ipsa libero provident illum, 
+      recusandae nesciunt ratione. Tempore!
+    </h1>
+    <button id="close-btn">Close</button>
+    <button id="block-btn">Do not show anymore</button>
+  </div>
+
+  <script>
+    var closeBtn = document.getElementById("close-btn");
+    var blockBtn = document.getElementById("block-btn");
+    var promotion = document.getElementById("promotion");
+
+    // close button click
+    closeBtn.addEventListener("click", function () {
+      promotion.classList.add("hidden");
+    })
+
+    // page is loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      var blockedAt = localStorage.getItem("blockedAt");
+
+      if (blockedAt) {
+        promotion.classList.add("hidden");
+      }
+    })
+
+    // block button click
+    blockBtn.addEventListener("click", function () {
+      var date = new Date().toLocaleDateString();
+      
+      localStorage.setItem("blockedAt", date);
+      promotion.classList.add("hidden");
+    })
+  </script>
+</body>
+</html>

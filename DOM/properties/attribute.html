@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    
+  <h1>Attributes</h1>
+  
+  <label for="input">Password</label>
+  <input 
+    type="password" 
+    id="input"
+    name="password" 
+    value="12345"
+    style="display: inline-block"
+  >
+  
+  <script>
+    var input = document.getElementById('input');
+  
+    // access attributes
+    console.log("type:", input.type)
+    console.log("id:", input.id)
+    console.log("name:", input.name)
+    console.log("value:", input.value)
+    console.log("style outline:", input.style.display);
+
+    // update attributes
+    input.type = "text"
+  </script>
+
+</body>
+</html>

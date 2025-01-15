@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Drag & Drop</h1>
+
+  <style>
+    #drop-zone {
+      border: 4px dashed #ddd;
+      padding: 4rem;
+      text-align: center;
+    }
+    
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <div id="drop-zone">
+    <p>Drag one or more files to this <i>drop zone</i>.</p>
+  </div>
+
+  <p id="done" class="hidden">Submitted</p>
+
+
+  <script>
+    var dropZone = document.getElementById("drop-zone");
+    var done = document.getElementById("done");
+
+    dropZone.addEventListener("dragover", dragOverHandler);
+    dropZone.addEventListener("drop", dropHandler);
+
+    function dropHandler(e) {
+      // cancel a browser to open files 
+      e.preventDefault();
+
+      console.log("File(s) dropped");
+
+      // selected files
+      var files = e.dataTransfer.files;
+
+      console.log("selected files:", e.dataTransfer.files);
+
+      // view update
+      dropZone.classList.add("hidden");
+      done.classList.remove("hidden");
+    }
+    
+    function dragOverHandler(e) {
+      // cancel a browser to open files
+      e.preventDefault();
+
+      console.log("dragging over");
+    }
+  </script>
+
+</body>
+</html>

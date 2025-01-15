@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Margin</h1>
+  <pre>
+    It creates space outside element.
+    It is used for taking space between elements.
+  </pre>
+
+  <style>
+    .item {
+      background-color: #ddd;
+      display: inline-block;
+    }
+
+    .m-4 {
+      margin: 1rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .ml-4 {
+      margin-left: 1rem;
+    }
+
+    .mr-4 {
+      margin-right: 1rem;
+    }
+  </style>
+
+
+  <h3>없음</h3>
+  <div class="item">item</div>
+
+  <h3>전체</h3>
+  <div class="item m-4">item</div>
+
+  <h3>top</h3>
+  <div class="item mt-4">item</div>
+
+  <h3>bottom</h3>
+  <div class="item mb-4">item</div>
+
+  <h3>left</h3>
+  <div class="item ml-4">item</div>
+
+  <h3>right</h3>
+  <div class="item mr-4">item</div>
+
+  <h3>x축</h3>
+  <div class="item ml-4 mr-4">item</div>
+
+  <h3>y축</h3>
+  <div class="item mt-4 mb-4">item</div>
+
+  <h3>top 제외</h3>
+  <div class="item ml-4 mr-4 mb-4">item</div>
+  
+</body>
+</html>

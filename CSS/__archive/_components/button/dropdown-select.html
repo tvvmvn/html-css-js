@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Q. Dropdown select</h1>
+
+  <style>
+    .container {
+      /* border: 1px dashed; */
+      width: 12rem;
+    }
+
+    .select {
+      /* size */
+      width: inherit;
+      /* layout */
+      display: flex;
+      justify-content: space-between;
+      /* design */
+      background-color: transparent;
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .icon {
+      width: 0.75rem;
+    }
+
+    .content {
+      /* remove default */
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      /* size */
+      width: inherit;
+      box-sizing: border-box;
+      /* design */
+      border: 1px solid #ccc;
+      border-top: none;
+      background-color: #fff;
+      position: absolute;
+      /* misc */
+      display: none;
+    }
+    
+    .container:hover .content {
+      display: block;
+    }
+
+    .content li {
+      padding: 0.5rem;
+    }
+
+    .content li:hover {
+      background-color: #eee;
+    }
+
+  </style>
+
+  <div class="container">
+    <button class="select">
+      <span>Car Manufacturer</span>
+      <svg 
+        class="icon"
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 320 512"
+      >
+        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/>
+      </svg>
+    </button>
+
+    <ul class="content">
+      <li>Volvo</li>
+      <li>Hyundai</li>
+      <li>Toyota</li>
+    </ul>
+  </div>
+
+  <p>..</p>
+
+</body>
+
+</html>

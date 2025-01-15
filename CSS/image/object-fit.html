@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>object fit</h1>
+  <p>handle fitting image on given size on img element</p>
+  
+  <!-- 
+    1. object fit: fill (default)
+    an image fills given dimension.
+    image ratio is changed into given ratio.
+    An image can be stretched or shrink.
+    
+    2. object fit: cover
+    an image fills given dimension.
+    An image keeps its original ratio.
+    An image can be cropped.
+    
+    3. object fit: contain
+    An image keeps its origin ratio.
+    empty space can be found.
+  -->
+
+  <style>
+    img {
+      width: 200px;
+      height: 200px;
+      border: 1px solid;
+    }
+
+    .object-fill {
+      object-fit: fill;
+    }
+
+    .object-contain {
+      object-fit: contain;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+  </style>
+
+
+  <h3>object fit: fill (default)</h3>
+  <img class="object-fill" src="../../../img/homies.jpg" alt="">
+
+  <h3>object fit: cover</h3>
+  <img class="object-cover" src="../../../img/homies.jpg" alt="">
+
+  <h3>object fit: contain</h3>
+  <img class="object-contain" src="../../../img/homies.jpg" alt="">
+
+</body>
+
+</html>

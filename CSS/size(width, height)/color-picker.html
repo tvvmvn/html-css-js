@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style>
+    input {
+      display: none;
+    }
+
+    .color-chip {
+      /* layout */
+      display: inline-block;
+      margin-right: 0.25rem;
+      /* size */
+      width: 2rem;
+      height: 2rem;
+      /* design */
+      border: 1px solid #ddd;
+      border-radius: 99px;
+    }
+    
+    input:checked + .color-chip {
+      outline: 4px solid #eee;
+    }
+    
+    .white {
+      background-color: #fff;
+    }
+    
+    .gray {
+      background-color: #888;
+    }
+    
+    .black {
+      background-color: #000;
+    }
+  </style>
+
+  <h1>Color picker</h1>
+
+  <input type="radio" name="color" id="white" checked>
+  <label for="white" class="color-chip white"></label>
+
+  <input type="radio" name="color" id="gray">
+  <label for="gray" class="color-chip gray"></label>
+  
+  <input type="radio" name="color" id="black">
+  <label for="black" class="color-chip black"></label>
+  
+</body>
+</html>

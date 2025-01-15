@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>display</h1>
+  
+  <!--   
+    display elements
+
+    1 block
+    It fills entire width of parent element.
+    default for most of element such as div, main, nav, p
+    
+    2 inline-block
+    It has width only for its contents.
+    default for buttons, input, img
+    
+    3 inline
+    It has width only for its contents.
+    default for span, a.
+    It is not good for layout usage because
+    It cannot have width, height, y-axis padding, margin
+    
+    4 none
+    It doesn't show on view 
+  -->
+
+  <style>
+    .item {
+      background-color: #ddd;
+    }
+
+    .block {
+      display: block;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .inline {
+      display: inline;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <h3>display: block</h3>
+  <div class="item block">item</div>
+  <div class="item block">item</div>
+
+  <h3>display: inline-block</h3>
+  <div class="item inline-block">item</div>
+  <div class="item inline-block">item</div>
+
+  <h3>display: inline</h3>
+  <div class="item inline">item</div>
+  <div class="item inline">item</div>
+
+  <h3>display: none</h3>
+  <div class="item hidden">item</div>
+  
+</body>
+</html>

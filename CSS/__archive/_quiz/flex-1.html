@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Q. flex</h1>
+  <p>flex direction</p>
+
+  <style>
+    #italy {
+      width: 150px;
+      height: 100px;
+    }
+
+    #germany {
+      width: 150px;
+      height: 100px;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    #italy .item {
+      width: 50px;
+      height: 100px;
+    }
+
+    #germany .item {
+      width: 150px;
+      height: 33.33333px;
+    }
+
+    .green {
+      background-color: green;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .black {
+      background-color: black;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .gold {
+      background-color: gold;
+    }
+  </style>
+
+  <h3>Italy</h3>
+  <p>colors: green, white, red</p>
+  <div id="italy" class="flex flex-row">
+    <div class="item green"></div>
+    <div class="item white"></div>
+    <div class="item red"></div>
+  </div>
+
+  <h3>Germany</h3>
+  <p>black, red, gold</p>
+  <div id="germany" class="flex flex-col">
+    <div class="item black"></div>
+    <div class="item red"></div>
+    <div class="item gold"></div>
+  </div>
+
+
+</body>
+
+</html>

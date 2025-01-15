@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <style>
+    header {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* size */
+      width: 100%;
+      /* design */
+      backdrop-filter: blur(8px);
+    }
+
+    .header-inner {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #btn {
+      border: none;
+      background-color: transparent;
+      font-size: 2rem;
+    }
+
+    #nav {
+      border-bottom: 1px solid #ddd;
+    }
+
+    #nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .link {
+      display: block;
+      padding: 0.5rem;
+      text-align: center;
+      color: #000;
+    }
+
+    main {
+      margin-top: 4rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+
+  <header>
+    <div class="header-inner">
+      <button id="btn">&#9776;</button>
+    </div>
+    <nav class="hidden" id="nav">
+      <ul>
+        <li>
+          <a href="#" class="link">Link</a>
+        </li>
+        <li>
+          <a href="#" class="link">Link</a>
+        </li>
+        <li>
+          <a href="#" class="link">Link</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Top navigation</h1>
+  </main>
+
+
+  <script>
+    var btn = document.getElementById('btn');
+    var nav = document.getElementById('nav');
+
+    // menu button click
+    btn.addEventListener("click", function () {
+      nav.classList.toggle("hidden");
+    });
+
+    // ground
+    document.addEventListener('click', function (e) {
+      // son
+      console.log(e.target)
+
+      // except for button in document
+      if (e.target !== btn) {
+        nav.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

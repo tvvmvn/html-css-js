@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>flex wrap</h1>
+  <p>It decides wrapping or not the items</p>
+
+  <style>
+    .container {
+      border: 1px solid;
+      width: 150px;
+    }
+    
+    .flex {
+      display: flex;
+    }
+    
+    .flex-nowrap {
+      flex-wrap: nowrap;
+    }
+    
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .item {
+      background-color: #ddd;
+      width: 100px;
+      padding: 0.5rem;
+    }
+  </style>
+
+  <h3>flex wrap: nowrap (default)</h3>
+
+  <div class="container flex flex-nowrap">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>flex wrap: wrap</h3>
+
+  <div class="container flex flex-wrap">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  
+</body>
+</html>

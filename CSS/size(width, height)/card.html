@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Card</h1>
+
+  <!-- 
+    * box-shadow
+    shadow effect
+    default is none.
+
+    - how to use
+    box-shadow: x y blur spread color inset 
+
+    1 offset-x (required)
+    left(-) / right(+)
+
+    2 offset-y (required)
+    top(-) / bottom(+)
+
+    3 blur
+    The higher the number, the more blurred the shadow will be.
+
+    4 spread
+    The higher the number, the bigger the shadow will be.
+
+    5 color
+
+    6 inset
+    apply effect on the inside of element
+  -->
+
+  <style>
+    .card {
+      /* size */
+      width: 16rem;
+      /* design */
+      box-shadow: 5px 5px 10px #ddd, -5px -5px 10px #ddd;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    img {
+      width: inherit;
+    }
+
+    .card-inner {
+      padding: 0 1rem 1rem;
+    }
+
+    .content {
+      color: #888;
+    }
+  </style>
+
+  <div class="card">
+    <img src="../../../img/Pumbaa.webp" alt="">
+    <div class="card-inner">
+      <h3>Pumbaa</h3>
+      <p class="content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Doloribus in corporis illo.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>

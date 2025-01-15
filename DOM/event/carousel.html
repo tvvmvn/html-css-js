@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <base href="../../../img/" target="_blank">
+</head>
+
+<body>
+
+  <h1>Carousel</h1>
+
+  <style>
+    #carousel {
+      /* size */
+      width: 200px;
+      height: 200px;
+      /* position */
+      position: relative;
+      /* misc */
+      overflow-x: hidden;
+    }
+
+    #container {
+      /* size */
+      width: 600px;
+      /* layout */
+      display: flex;
+      /* misc */
+      transition: transform 0.2s;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    #prev-btn, #next-btn {
+      /* position */
+      position: absolute;
+      top: 0;
+      height: 100%;
+      /* design */
+      background-color: transparent;
+      border: none;
+      color: rgba(255 255 255 / 0.5);
+      font-size: 2rem;
+    }
+
+    #prev-btn {
+      x: 0;
+    }
+
+    #next-btn {
+      right: 0;
+    }
+
+    .indicator {
+      /* position */
+      position: absolute;
+      bottom: 12px;
+      width: 100%;
+      /* layout */
+      display: flex;
+      justify-content: center;
+    }
+
+    .dot {
+      /* design */
+      display: block;
+      background-color: #fff;
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      margin: 0 2px;
+      /* effect */
+      opacity: 0.5;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .active {
+      opacity: 1;
+    }
+  </style>
+
+  <div id="carousel">
+    <div id="container">
+      <img class="photo" src="Simba.webp" alt="">
+      <img class="photo" src="Timon.webp" alt="">
+      <img class="photo" src="Pumbaa.webp" alt="">
+    </div>
+
+    <button id="prev-btn" class="hidden" onclick="main(-1)">&#10094;</button>
+    <button id="next-btn" onclick="main(1)">&#10095;</button>
+
+    <div class="indicator">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <script>
+    // container and photos
+    var carousel = document.getElementById('carousel');
+    var container = document.getElementById('container');
+    var photos = document.getElementsByClassName("photo");
+    var imageWidth = 200;
+    // index, x
+    var firstIndex = 0;
+    var lastIndex = photos.length - 1;
+    var index = 0;
+    var x = 0;
+    // buttons
+    var prevBtn = document.getElementById('prev-btn');
+    var nextBtn = document.getElementById('next-btn');
+    // indicator
+    var dots = document.getElementsByClassName('dot');
+
+
+    // main 
+    function main(data) {
+      index += data;
+      x = -(index * imageWidth);
+
+      console.log(`index: ${index}, x: ${x}`);
+
+      // container
+      container.style.transform = `translateX(${x}px)`;
+
+      // buttons
+      if (index == firstIndex) {
+        prevBtn.classList.add('hidden');
+      } else {
+        prevBtn.classList.remove('hidden');
+      }
+  
+      if (index == lastIndex) {
+        nextBtn.classList.add('hidden');
+      } else {
+        nextBtn.classList.remove('hidden');
+      }
+
+      // indicator
+      for (var i = 0; i < dots.length; i++) {
+        if (i == index) {
+          dots[i].classList.add('active');
+        } else {
+          dots[i].classList.remove('active');
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>

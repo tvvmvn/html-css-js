@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <style>
+    body {
+      min-height: calc(100vh + 200px);
+    }
+
+    #header {
+      /* position */
+      position: fixed;
+      top: 0;
+      left: 0;
+      /* size */
+      width: 100%;
+      height: 3rem;
+      /* layout */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* design */
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      font-weight: 600;
+      /* misc */
+      transition: top 0.2s;
+    }
+    
+    #header.hidden {
+      top: -3rem;
+    }
+
+    .content {
+      color: #ddd;
+      font-size: 4rem;
+    }
+  </style>
+
+  <header id="header">
+    Switch Header
+  </header>
+
+  <h1 class="content">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+    Delectus nobis commodi sit est nesciunt labore laboriosam 
+    inventore eveniet! Nemo qui suscipit maxime. 
+    Vel veritatis cumque ipsam quam, ducimus distinctio itaque?
+  </h1>
+
+  <script>
+    var header = document.getElementById('header');
+    var prevScrollTop = 0;
+
+    document.addEventListener('scroll', handleScroll);
+
+    function handleScroll() {
+      var scrollTop = document.documentElement.scrollTop;
+
+      // scrollTop of a previous point
+      console.log('previous scrollTop:', prevScrollTop);
+      console.log('scrollTop', scrollTop);
+
+      if (scrollTop > prevScrollTop) { // scrolling down
+        header.classList.add('hidden');
+      } else {
+        header.classList.remove('hidden');
+      }
+
+      prevScrollTop = scrollTop;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Modal Gallery</h1>
+
+  <style>
+    .overlay {
+      position: fixed;
+      /* all 0 */
+      inset: 0;
+      background-color: rgba(0 0 0 / 0.5);
+    }
+
+    .modal {
+      width: 24rem;
+      margin: 100px auto 0;
+    }
+
+    img {
+      width: inherit;
+      border-radius: 1rem;
+    }
+
+    .caption {
+      text-align: center;
+      color: #ddd;
+    }
+  </style>
+
+
+<div class="overlay">
+  <div class="modal">
+    <img src="../../../img/homies.jpg" alt="">
+    <h3 class="caption">Timon & Pumbaa</h3>
+  </div>
+</div>
+  
+</body>
+</html>
