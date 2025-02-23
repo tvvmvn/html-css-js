@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>flex shrink</h1>
+
+  <style>
+    .container {
+      border: 1px solid;
+      display: flex;
+      width: 200px;
+    }
+
+    .item {
+      background-color: #000;
+      color: #fff;
+      padding: 0.5rem;
+      width: 100px;
+    }
+
+    .shrink {
+      background-color: #f00;
+      flex-shrink: 0;
+    }
+  </style>
+
+  <h3>1</h3>
+  <div class="container">
+    <div class="item">item</div>
+    <div class="item shrink">item</div>
+    <div class="item">item</div>
+  </div>
+  
+</body>
+</html>

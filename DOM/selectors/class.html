@@ -8,8 +8,7 @@
 </head>
 <body>
 
-  <h1>class selector</h1>
-  <p>select elements by class</p>
+  <h1>HTMLCollection</h1>
 
   <ul>
     <li class="item">foo</li>
@@ -18,24 +17,19 @@
   </ul>
 
   <script>
-    // document.getElementsByClassName(class)
-    var items = document.getElementsByClassName("item");
+    // collection
+    var c = document.getElementsByClassName("item");
 
-    // HTMLCollections (type)
-    console.log(items) 
+    // HTMLCollections 
+    console.log(c); 
 
-    // access each element
-    console.log(items[0]) 
-    console.log(items[1]) 
-    console.log(items[2]) 
+    // access items
+    console.log(c[0]); 
+    console.log(c[1]); 
+    console.log(c[2]); 
     
-    // foo
-    // bar
-    // baz
-  
-    // get count of elements
-    console.log(items.length); 
-    // 3
+    // item count
+    console.log(c.length); 
   </script>
   
 </body>

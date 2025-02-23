@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>DOMTokenList</h1>
+
+  <div id="foo" class="a b c"></div>
+
+  <script>
+    
+    var list = document.getElementById("foo").classList;
+
+    // access items
+    console.log(list[0]);
+
+    // add items
+    list.add("d");
+
+    // length
+    console.log(list.length);
+    
+  </script>
+  
+</body>
+</html>

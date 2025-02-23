@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>position: absolute</h1>
+
+  <style>
+    .container {
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+    }
+
+    .item {
+      width: 20px;
+      height: 20px;
+      background-color: #f00;
+    }
+    
+    .relative {
+      position: relative;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .top-4 {
+      top: 1rem;
+    }
+
+    .left-4 {
+      left: 1rem;
+    }
+  </style>
+
+  <div class="container relative">
+    <div class="item absolute top-4 left-4"></div>
+  </div>
+  
+</body>
+</html>

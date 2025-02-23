@@ -7,14 +7,16 @@
 </head>
 <body>
 
-  <h1>id selector</h1>
+  <h1>event listener</h1>
 
-  <div id="foo">hello</div>
+  <button id="btn">click me</button>
 
   <script>
-    var foo = document.getElementById("foo");
+    var btn = document.getElementById("btn");
 
-    console.log(foo);
+    btn.addEventListener("click", function () {
+      alert("You are gay");
+    })
   </script>
   
 </body>
