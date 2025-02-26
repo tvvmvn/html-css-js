@@ -7,17 +7,17 @@
 </head>
 <body>
 
-  <h1>textContent</h1>
+  <h1>padding</h1>
 
-  <div id="foo">hello</div>
+  <style>
+    .item {
+      border: 1px solid;
+      display: inline-block;
+      padding: 0.5rem;
+    }
+  </style>
 
-  <script>
-    var foo = document.getElementById("foo");
+  <div class="item">item</div>
 
-    console.log(foo.textContent);
-
-    foo.textContent = "bar";
-  </script>
-  
 </body>
 </html>
