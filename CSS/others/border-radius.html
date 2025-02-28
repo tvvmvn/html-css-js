@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>border radius</h1>
+
+  <style>
+    .item {
+      background-color: #ddd;
+      width: 100px;
+      height: 100px;
+    }
+
+    .rounded-none {
+      border-radius: 0;
+    }
+
+    .rounded-xl {
+      border-radius: 12px;
+    }
+
+    .rounded-full {
+      border-radius: 999px;
+    }
+  </style>
+
+  <h3>no rounded</h3>
+  <div class="item rounded-none"></div>
+
+  <h3>rounded</h3>
+  <div class="item rounded-xl"></div>
+
+  <h3>circle</h3>
+  <div class="item rounded-full"></div>
+  
+</body>
+</html>

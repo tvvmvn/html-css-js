@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>transition</h1>
+
+  <style>
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: #000;
+      /* transition: 0.1s transform; */
+      transition-property: transform;
+      transition-duration: 0.1s;
+    }
+
+    .item:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+  <div class="item"></div>
+  
+</body>
+</html>
