@@ -7,19 +7,37 @@
 </head>
 <body>
 
-  <h1>border</h1>
+  <h1>border width</h1>
 
   <style>
     .item {
       display: inline-block;
       padding: 0.5rem;
-      border-width: 1px;
       border-style: solid;
       border-color: #000;
     }
+
+    .border {
+      border-width: 1px;
+    }
+
+    .border-4 {
+      border-width: 4px;
+    }
+
+    .border-8 {
+      border-width: 8px;
+    }
   </style>
 
-  <div class="item">item</div>
+  <h3>1px</h3>
+  <div class="item border">item</div>
+
+  <h3>4px</h3>
+  <div class="item border-4">item</div>
+
+  <h3>8px</h3>
+  <div class="item border-8">item</div>
 
 </body>
 </html>

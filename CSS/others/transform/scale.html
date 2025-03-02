@@ -7,24 +7,36 @@
 </head>
 <body>
 
-  <h1>transition</h1>
+  <h1>scale</h1>
 
   <style>
     .item {
       width: 100px;
       height: 100px;
       background-color: #ddd;
-      /* transition: 0.1s transform; */
-      transition-property: transform;
-      transition-duration: 0.1s;
     }
 
-    .item:hover {
-      transform: scale(1.1);
+    .scale-none {
+      scale: none;
+    }
+
+    .scale-110 {
+      scale: 110%;
+    }
+
+    .-scale-90 {
+      scale: 90%;
     }
   </style>
 
-  <div class="item"></div>
+  <h3>none</h3>
+  <div class="item scale-none"></div>
+  
+  <h3>110%</h3>
+  <div class="item scale-110"></div>
+
+  <h3>90%</h3>
+  <div class="item -scale-90"></div>
   
 </body>
 </html>

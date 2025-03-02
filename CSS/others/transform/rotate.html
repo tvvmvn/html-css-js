@@ -7,7 +7,7 @@
 </head>
 <body>
 
-  <h1>transform</h1>
+  <h1>rotate</h1>
 
   <style>
     .item {
@@ -16,25 +16,23 @@
       background-color: #ddd;
     }
 
-    .rotate-45 {
-      transform: rotate(45deg);
+    .rotate-20 {
+      rotate: 20deg;
     }
 
-    .scale-110 {
-      transform: scale(110%);
+    .-rotate-20 {
+      rotate: -20deg;
     }
-
-    .translate {}
   </style>
 
-  <h3>rotate</h3>
-  <div class="item rotate-45"></div>
+  <h3>none</h3>
+  <div class="item rotate-none"></div>
   
-  <h3>scale</h3>
-  <div class="item scale-110"></div>
+  <h3>20 degree</h3>
+  <div class="item rotate-20"></div>
 
-  <h3>translate</h3>
-  <div class="item"></div>
+  <h3>-20 degree</h3>
+  <div class="item -rotate-20"></div>
   
 </body>
 </html>

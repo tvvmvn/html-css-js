@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>translate</h1>
+
+  <style>
+    .item {
+      width: 100px;
+      height: 100px;
+      background-color: #ddd;
+    }
+
+    .translate-none {
+      translate: none;
+    }
+
+    .translate-x-4 {
+      translate: 1rem;
+    }
+
+    .translate-y-4 {
+      translate: 0rem 1rem;
+    }
+
+    .translate-4 {
+      translate: 1rem 1rem;
+    }
+  </style>
+
+  <h3>none</h3>
+  <div class="item translate-none"></div>
+
+  <h3>x 1rem</h3>
+  <div class="item translate-x-4"></div>
+
+  <h3>y 1rem</h3>
+  <div class="item translate-y-4"></div>
+
+  <h3>x y 1rem</h3>
+  <div class="item translate-4"></div>
+  
+</body>
+</html>
