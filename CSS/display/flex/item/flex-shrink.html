@@ -10,30 +10,40 @@
   <h1>flex shrink</h1>
 
   <style>
-    .container {
-      border: 1px solid;
+    .container {  
+      background-color: #ddd;
       display: flex;
       width: 200px;
     }
 
     .item {
-      background-color: #000;
-      color: #fff;
+      border: 1px solid;
       padding: 0.5rem;
       width: 100px;
     }
 
     .shrink {
+      flex-shrink: 1;
+    }
+    
+    .shrink-0 {
       background-color: #f00;
       flex-shrink: 0;
     }
   </style>
 
-  <h3>1</h3>
+  <h3>with shrink</h3>
   <div class="container">
-    <div class="item">item</div>
     <div class="item shrink">item</div>
-    <div class="item">item</div>
+    <div class="item shrink">item</div>
+    <div class="item shrink">item</div>
+  </div>
+
+  <h3>without shrink</h3>
+  <div class="container">
+    <div class="item shrink">item</div>
+    <div class="item shrink-0">item</div>
+    <div class="item shrink">item</div>
   </div>
   
 </body>

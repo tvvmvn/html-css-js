@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>flex basis</h1>
+
+  <style>
+    .container {
+      display: flex;
+      border: 1px solid;
+    }
+
+    .flex-row {
+      flex-direction: row;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+
+    .item {
+      background-color: #ddd;
+      padding: 0.5rem;
+      flex-basis: 50px;
+    }
+
+  </style>
+
+  <h3>direction row</h3>
+  <div class="container flex-row">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+
+  <h3>direction column</h3>
+  <div class="container flex-col">
+    <div class="item">item</div>
+    <div class="item">item</div>
+    <div class="item">item</div>
+  </div>
+  
+</body>
+</html>
